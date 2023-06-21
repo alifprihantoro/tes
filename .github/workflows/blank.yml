@@ -1,0 +1,22 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Create CHANGELOG and new version
+        id: createTag
+        uses: alifprihantoro/tes@master
+        with:
+          tes: |
+            multi line 1
+            multi line 2
