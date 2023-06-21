@@ -3,7 +3,7 @@ name: Create Release
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   create_release:
     runs-on: ubuntu-latest
@@ -17,6 +17,6 @@ jobs:
         id: createTag
         uses: alifprihantoro/tes@master
         with:
-          tes: |
+          TES: |
             multi line 1
             multi line 2
